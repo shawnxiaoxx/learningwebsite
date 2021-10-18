@@ -112,6 +112,10 @@ while(true){
     }
 
     size = prompt('大小')
+    if(typeof size != 'number' || isNaN(size)){
+        confirm('请输入数字')
+        continue
+    }
     if(shape == '菱形' && size % 2 == 0){
         confirm('菱形需要奇数大小')
         continue
