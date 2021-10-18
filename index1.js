@@ -91,7 +91,7 @@ var character = [] // 组成图像的字符
 //读取构成图像的字符
 while(true){
     var temp = prompt('输入字符') 
-    if(temp == ' '){
+    if(temp == ' '||temp == ''){
         confirm('别输空格')
     }else{
         if(temp != null) character.push(temp) 
