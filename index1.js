@@ -110,20 +110,17 @@ while(true){
     }
 
     size = prompt('大小')
-    reg = /[\d]/;
-    if(!reg.test(size)){ //数字检测
-        confirm('请输入数字')
-        continue
-    }
-    if(shape == '菱形' && size % 2 == 0){ //菱形长度检测
-        confirm('菱形需要奇数大小')
-        continue
-    }
+    if(~~size == size && size != ''){ //数字检测
+        if(shape == '菱形' && size % 2 == 0){ //菱形长度检测
+            confirm('菱形需要奇数大小')
+            continue
+        }
 
-    if(shape == '三角形') res = triangle(character,size)
-    if(shape == '正方形') res = square(character,size)
-    if(shape == '菱形') res = rhomb(character,size)
-    break
+        if(shape == '三角形') res = triangle(character,size)
+        if(shape == '正方形') res = square(character,size)
+        if(shape == '菱形') res = rhomb(character,size)
+        break
+    }
 }
 
 alert(res)
