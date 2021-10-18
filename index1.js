@@ -88,7 +88,7 @@ var character = [] // 组成图像的字符
 
 //读取构成图像的字符
 while(true){
-    var temp = prompt('输入字符') 
+    var temp = prompt('输入组成图案的字符(至少一个)，取消后进入下一步') 
     if(temp == ' '||temp == ''){
         confirm('别输空格')
     }else{
@@ -110,7 +110,8 @@ while(true){
     }
 
     size = prompt('大小')
-    if(typeof size != 'number' || isNaN(size)){ //数字检测
+    reg = /[\d]/;
+    if(!reg.test(size)){ //数字检测
         confirm('请输入数字')
         continue
     }
