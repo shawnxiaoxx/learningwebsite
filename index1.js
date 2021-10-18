@@ -84,8 +84,6 @@ function rhomb(character, size){
     return res
 }
 
-
-
 var character = [] // 组成图像的字符
 
 //读取构成图像的字符
@@ -105,7 +103,7 @@ var res = '' //输出图案
 
 while(true){
 
-    shape = prompt('形状')
+    shape = prompt('形状(三角形，正方形，菱形)')
     if(shape != '三角形' && shape != '正方形' && shape != '菱形'){ 
         confirm('请输入三角形/正方形/菱形')
         continue
