@@ -120,6 +120,8 @@ while(true){
         if(shape == '正方形') res = square(character,size)
         if(shape == '菱形') res = rhomb(character,size)
         break
+    }else{
+        confirm('大小不符合要求')
     }
 }
 
